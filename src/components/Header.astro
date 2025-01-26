@@ -1,0 +1,26 @@
+---
+import Cart from '../icons/Cart.astro';
+import User from '../icons/User.astro';
+---
+
+<header class="flex justify-between px-8 pt-6">
+  <picture class="w-80">
+    <img src="/logo.png" alt="Logo de SneakerStore" />
+  </picture>
+  <aside class="flex gap-x-4">
+    <button
+      class="bg-neutral-500 flex items-center justify-center rounded-full w-[72px] h-[72px] hover:scale-125 transition"
+    >
+      <a href="#">
+        <Cart width="45" />
+      </a>
+    </button>
+    <button
+      class="bg-neutral-500 flex items-center justify-center rounded-full w-[72px] h-[72px] hover:scale-125 transition"
+    >
+      <a href="#">
+        <User width="45" />
+      </a>
+    </button>
+  </aside>
+</header>
