@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { featuredShoes } from '../../data/featuredShoes';
+
+export function getStaticPaths() {
+  return featuredShoes.map((shoe) => ({
+    params: { id: shoe.id },
+  }));
+}
+---
+
+<Layout>
+  <main>
+    <h1>Informacion del Zapato</h1>
+    <img
+      src={featuredShoes[Astro.params.id - 1].images[0]}
+      alt={`Imagen del Zapato: ${featuredShoes[Astro.params.id].name}`}
+    />
+  </main>
+</Layout>
