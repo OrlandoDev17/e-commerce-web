@@ -2,10 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../sections/Hero.astro';
 import FeaturedShoes from '../sections/FeaturedShoes.astro';
-import SmokeBackground from '../components/SmokeBackground.astro';
 ---
 
 <Layout>
   <Hero />
-  <FeaturedShoes />
+  <FeaturedShoes client:load />
 </Layout>

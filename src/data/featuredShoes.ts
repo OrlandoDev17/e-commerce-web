@@ -6,7 +6,7 @@ interface shoe {
   images: string[];
 }
 
-const featuredShoes: shoe[] = [
+export const featuredShoes: shoe[] = [
   {
     id: 1,
     name: 'Air Jordan 1 Retro Low OG SP Travis Scott Medium Olive',

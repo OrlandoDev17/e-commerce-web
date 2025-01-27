@@ -19,12 +19,12 @@
 
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(w, h);
-  renderer.setClearColor(0x333333, 1);
+  renderer.setClearColor(0x555555, 1);
 
   $bkg?.appendChild(renderer.domElement);
 
   const light = new THREE.DirectionalLight(0xffffff, 0.5);
-  light.position.set(1, -2, 5);
+  light.position.set(10, -7, 1);
   scene.add(light);
 
   const smokeParticles: THREE.Mesh[] = [];
