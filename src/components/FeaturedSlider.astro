@@ -1,0 +1,59 @@
+---
+import NextArrow from '../icons/NextArrow.astro';
+import PrevArrow from '../icons/PrevArrow.astro';
+import { featuredShoes } from '../data/featuredShoes';
+---
+
+<style>
+  .swiper-slide {
+    height: 600px;
+    border-radius: 10px;
+    overhflow: hidden;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+</style>
+
+<!-- Contenedor Principal del Swiper -->
+<div class="swiper">
+  <!-- Wrapper Adicional Requerido -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {
+      featuredShoes.map((shoe) => (
+        <div class="swiper-slide">
+          <img src={shoe.images[0]} alt={`Imagen del Zapato: ${shoe.name}`} />
+        </div>
+      ))
+    }
+  </div>
+  <!-- Botones de Navegacion -->
+  <PrevArrow width="60" className="swiper-button-prev" />
+  <NextArrow width="60" className="swiper-button-next" />
+</div>
+
+<script>
+  // Core de Swiper y estilos
+  import Swiper from 'swiper';
+  import 'swiper/css';
+
+  // Modulo de navegacion de Swiper y estilos
+  import { Navigation } from 'swiper/modules';
+  import 'swiper/css/navigation';
+
+  // Configurar Swiper
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
+  });
+</script>
