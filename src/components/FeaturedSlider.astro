@@ -4,37 +4,51 @@ import PrevArrow from '../icons/PrevArrow.astro';
 import { featuredShoes } from '../data/featuredShoes';
 ---
 
-<style>
-  .swiper-slide {
-    height: 600px;
-    border-radius: 10px;
-    overhflow: hidden;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-</style>
-
-<!-- Contenedor Principal del Swiper -->
-<div class="swiper">
-  <!-- Wrapper Adicional Requerido -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    {
-      featuredShoes.map((shoe) => (
-        <div class="swiper-slide">
-          <img src={shoe.images[0]} alt={`Imagen del Zapato: ${shoe.name}`} />
-        </div>
-      ))
-    }
+<main>
+  <!-- Contenedor Principal del Swiper -->
+  <div class="swiper">
+    <!-- Wrapper Adicional Requerido -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {
+        featuredShoes.map((shoe) => (
+          // Card
+          <article class="swiper-slide flex flex-col items-center justify-center mt-44 bg-primary rounded-xl shadow-xl p-8 h-[500px]">
+            <picture>
+              <img
+                class="rounded-xl relative -top-10"
+                src={shoe.images[0]}
+                alt={`Imagen del Zapato: ${shoe.name}`}
+              />
+            </picture>
+            <div class="flex flex-col">
+              <span class="text-xl text-neutral-400">{shoe.maker}</span>
+              <h2 class="font-bricolage-grotesque font-bold tracking-wide text-2xl my-3 h-16 flex">
+                {shoe.name}
+              </h2>
+              <span class="text-xl tracking-widest font-bold text-neutral-400">
+                ${shoe.price}.00
+              </span>
+            </div>
+            <div class="mt-12 flex justify-center ">
+              <button>
+                <a
+                  class="px-28 text-white font-bold tracking-wider border-2 py-3 rounded hover:scale-110 hover:bg-blue-500 transition"
+                  href={`/Shoes/${shoe.id}`}
+                >
+                  AGREGAR AL CARRITO
+                </a>
+              </button>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <!-- Botones de Navegacion -->
+    <PrevArrow width="60" className="swiper-button-prev" />
+    <NextArrow width="60" className="swiper-button-next" />
   </div>
-  <!-- Botones de Navegacion -->
-  <PrevArrow width="60" className="swiper-button-prev" />
-  <NextArrow width="60" className="swiper-button-next" />
-</div>
+</main>
 
 <script>
   // Core de Swiper y estilos
