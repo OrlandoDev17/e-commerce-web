@@ -9,12 +9,4 @@ export function getStaticPaths() {
 }
 ---
 
-<Layout>
-  <main>
-    <h1>Informacion del Zapato</h1>
-    <img
-      src={featuredShoes[Astro.params.id - 1].images[0]}
-      alt={`Imagen del Zapato: ${featuredShoes[Astro.params.id].name}`}
-    />
-  </main>
-</Layout>
+<Layout />
