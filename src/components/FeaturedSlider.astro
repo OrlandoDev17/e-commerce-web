@@ -3,6 +3,13 @@ import { featuredShoes } from '../data/featuredShoes';
 import ShoeCard from './ShoeCard.astro';
 ---
 
+<style>
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fefefe;
+  }
+</style>
+
 <main class="relative">
   <!-- Contenedor Principal del Swiper -->
   <div class="swiper h-auto relative -top-12">
@@ -18,6 +25,8 @@ import ShoeCard from './ShoeCard.astro';
         ))
       }
     </div>
+    <span class="swiper-button-prev absolute top-[60%]"></span>
+    <span class="swiper-button-next absolute top-[60%]"></span>
   </div>
 </main>
 
@@ -26,19 +35,27 @@ import ShoeCard from './ShoeCard.astro';
   import Swiper from 'swiper';
   import 'swiper/css';
 
+  // Modulo Navigation de Swiper y Estilos
+  import { Navigation } from 'swiper/modules';
+  import 'swiper/css/navigation';
+
   // Modulo de autoplay de Swiper y estilos
   import { Autoplay } from 'swiper/modules';
   import 'swiper/css/autoplay';
 
   // Configurar Swiper
   const swiper = new Swiper('.swiper', {
-    modules: [Autoplay],
+    modules: [Autoplay, Navigation],
     loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 </script>
