@@ -1,16 +1,14 @@
 ---
-const { width, className } = Astro.props;
+const { className, color } = Astro.props;
 ---
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="currentColor"
+  stroke={color}
   stroke-linecap="round"
   stroke-linejoin="round"
-  width={width}
-  height={width}
   stroke-width="2"
   class={className}
 >
