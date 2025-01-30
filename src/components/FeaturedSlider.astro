@@ -1,13 +1,11 @@
 ---
-import NextArrow from '../icons/NextArrow.astro';
-import PrevArrow from '../icons/PrevArrow.astro';
 import { featuredShoes } from '../data/featuredShoes';
 import ShoeCard from './ShoeCard.astro';
 ---
 
-<main>
+<main class="relative">
   <!-- Contenedor Principal del Swiper -->
-  <div class="swiper h-auto">
+  <div class="swiper h-auto relative -top-12">
     <!-- Wrapper Adicional Requerido -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -20,9 +18,6 @@ import ShoeCard from './ShoeCard.astro';
         ))
       }
     </div>
-    <!-- Botones de Navegacion -->
-    <PrevArrow width="60" className="swiper-button-prev" />
-    <NextArrow width="60" className="swiper-button-next" />
   </div>
 </main>
 
@@ -31,19 +26,18 @@ import ShoeCard from './ShoeCard.astro';
   import Swiper from 'swiper';
   import 'swiper/css';
 
-  // Modulo de navegacion de Swiper y estilos
-  import { Navigation } from 'swiper/modules';
-  import 'swiper/css/navigation';
+  // Modulo de autoplay de Swiper y estilos
+  import { Autoplay } from 'swiper/modules';
+  import 'swiper/css/autoplay';
 
   // Configurar Swiper
   const swiper = new Swiper('.swiper', {
-    modules: [Navigation],
+    modules: [Autoplay],
     loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
-    navigation: {
-      prevEl: '.swiper-button-prev',
-      nextEl: '.swiper-button-next',
+    autoplay: {
+      delay: 2000,
     },
   });
 </script>
