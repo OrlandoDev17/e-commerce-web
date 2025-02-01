@@ -1,0 +1,25 @@
+---
+import Filter from '../icons/Filter.astro';
+import Order from '../icons/Order.astro';
+---
+
+<div>
+  <h2 class="text-4xl font-montserrat font-bold">- Catalogo de Productos</h2>
+</div>
+<div class="flex justify-between mt-12 mx-24">
+  <button
+    class="bg-white text-primary text-xl font-bold py-3 px-6 rounded-xl flex gap-x-2 hover:scale-125 transition"
+  >
+    Filtrar
+    <Filter width="30" />
+  </button>
+  <span class="text-5xl font-bricolage-grotesque font-bold uppercase"
+    >Mas Vendidos</span
+  >
+  <button
+    class="bg-white text-primary text-xl font-bold py-3 px-6 rounded-xl flex gap-x-2 hover:scale-125 transition"
+  >
+    Ordenar por
+    <Order width="30" />
+  </button>
+</div>

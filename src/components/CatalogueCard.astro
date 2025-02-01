@@ -1,0 +1,30 @@
+---
+const { shoe } = Astro.props;
+---
+
+<div class="flex flex-col justify-center">
+  <picture>
+    <img
+      class="aspect-auto"
+      src={shoe.images[0]}
+      alt={`Imagen del zapato ${shoe.name}`}
+    />
+  </picture>
+  <div class="mt-8">
+    <span class="text-xl text-neutral-400">{shoe.maker}</span>
+    <h2
+      class="font-bricolage-grotesque text-2xl font-bold tracking-wide my-3 h-16 flex"
+    >
+      {shoe.name}
+    </h2>
+    <span class="text-xl text-neutral-300 tracking-widest"
+      >${shoe.price}.00</span
+    >
+  </div>
+  <button class="mt-8">
+    <a
+      class="px-16 text-white font-bold tracking-wider border-2 py-3 rounded inline-block hover:scale-110 hover:bg-blue-600 transition"
+      href={`/catalogue/${shoe.id}`}>Agregar al Carrito</a
+    >
+  </button>
+</div>

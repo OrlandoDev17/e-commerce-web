@@ -29,13 +29,14 @@ export const catalogue: shoe[] = [
     ],
   },
   {
-    id: 'Air-Jordan-4-x-Ma-Maniere-Retro-WMNS',
-    name: 'Air Jordan 4 x A Ma Maniére Retro WMNS - While You Were Sleeping',
-    price: 350,
+    id: 'Nike-Hot-Step-2-NOCTA-Drake-White',
+    name: 'Nike Hot Step 2 NOCTA Drake White',
+    price: 420,
     maker: 'Nike',
     images: [
-      'https://ciconceptstore.com/cdn/shop/files/FZ4810-200.png?v=1727422298&width=1000',
-      'https://ciconceptstore.com/cdn/shop/files/FZ4810-200_2.jpg?v=1727422298&width=1000',
+      'https://ciconceptstore.com/cdn/shop/files/nike-hot-step-2-nocta-drake-white-2-Photoroom.png?v=1715683963&width=800',
+      'https://ciconceptstore.com/cdn/shop/files/nike-hot-step-2-nocta-drake-white-3-Photoroom.png?v=1715683963&width=800',
+      'https://ciconceptstore.com/cdn/shop/files/nike-hot-step-2-nocta-drake-white-4-Photoroom.png?v=1715683963&width=800',
     ],
   },
   {
@@ -100,6 +101,38 @@ export const catalogue: shoe[] = [
       'https://ciconceptstore.com/cdn/shop/files/Nike_SB_Dunk_Low_Rayssa_Leal3.webp?v=1719658004&width=800',
       'https://ciconceptstore.com/cdn/shop/files/Nike_SB_Dunk_Low_Rayssa_Leal2.webp?v=1719658004&width=500',
       'https://ciconceptstore.com/cdn/shop/files/Nike_SB_Dunk_Low_Rayssa_Leal1.webp?v=1719658004&width=500',
+    ],
+  },
+  {
+    id: 'Adidas-Campus-00s-Grey-White',
+    name: 'Adidas Campus 00s Grey White',
+    price: 160,
+    maker: 'Adidas',
+    images: [
+      'https://ciconceptstore.com/cdn/shop/products/adidas-campus-00s-grey-white-1_2000x_b24884f0-1c19-4744-ba2e-d247b8a5d7fb.png?v=1701534285&width=700',
+      'https://ciconceptstore.com/cdn/shop/products/adidas-campus-00s-grey-white-2_2000x_b2c3b94f-15f1-4546-b189-8f1072414118.png?v=1701534285&width=700',
+    ],
+  },
+  {
+    id: 'Adidas-Yeezy-Boost-350-V2-Onyx',
+    name: 'Adidas Yeezy Boost 350 V2 - Onyx',
+    price: 380,
+    maker: 'Adidas',
+    images: [
+      'https://ciconceptstore.com/cdn/shop/files/Adidas_Yeezy_Boost_350_V2_Onyx1.webp?v=1719069495&width=800',
+      'https://ciconceptstore.com/cdn/shop/files/Adidas_Yeezy_Boost_350_V2_Onyx2.webp?v=1719069494&width=800',
+      'https://ciconceptstore.com/cdn/shop/files/Adidas_Yeezy_Boost_350_V2_Onyx3.webp?v=1719069494&width=800',
+    ],
+  },
+  {
+    id: 'Jordan-1-Mid-Ice-Blue-GS',
+    name: 'Jordan 1 Mid - Ice Blue (GS)',
+    price: 220,
+    maker: 'Nike',
+    images: [
+      'https://ciconceptstore.com/cdn/shop/products/1_10.png?v=1676115250&width=1000',
+      'https://ciconceptstore.com/cdn/shop/products/2_5_0130d22f-723b-469e-807d-efbabe26e94a.png?v=1676115254&width=1000',
+      'https://ciconceptstore.com/cdn/shop/products/3_1_a2160bfc-a347-4faa-843d-79ce5600988d.png?v=1676115256&width=1000',
     ],
   },
 ];
