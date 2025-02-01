@@ -1,9 +1,11 @@
 ---
 import '@fontsource-variable/bricolage-grotesque';
 import '@fontsource-variable/montserrat';
-import SmokeBackground from '../components/SmokeBackground.astro';
 
 import { ClientRouter } from 'astro:transitions';
+
+import SmokeBackground from '../components/SmokeBackground.astro';
+import Footer from '../sections/Footer.astro';
 ---
 
 <!doctype html>
@@ -25,6 +27,7 @@ import { ClientRouter } from 'astro:transitions';
   <body>
     <SmokeBackground />
     <slot />
+    <Footer />
   </body>
 </html>
 

@@ -1,6 +1,6 @@
 ---
 import { featuredShoes } from '../data/featuredShoes';
-import ShoeCard from './ShoeCard.astro';
+import SliderCard from './SliderCard.astro';
 ---
 
 <style>
@@ -14,13 +14,13 @@ import ShoeCard from './ShoeCard.astro';
   <!-- Contenedor Principal del Swiper -->
   <div class="swiper h-auto relative -top-12">
     <!-- Wrapper Adicional Requerido -->
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper gap-x-10 grid grid-cols-3">
       <!-- Slides -->
       {
         featuredShoes.map((shoe) => (
           // Card
-          <article class="swiper-slide flex flex-col items-center justify-center mt-44 bg-primary rounded-xl shadow-xl p-8">
-            <ShoeCard shoe={shoe} />
+          <article class="swiper-slide mt-44 max-w-[575px] bg-primary rounded-2xl  p-8">
+            <SliderCard shoe={shoe} />
           </article>
         ))
       }
@@ -48,9 +48,8 @@ import ShoeCard from './ShoeCard.astro';
     modules: [Autoplay, Navigation],
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 30,
     autoplay: {
-      // delay: 3000,
+      delay: 5000,
       disableOnInteraction: true,
     },
     navigation: {
