@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/images/hero-background.jpg')",
+        'hero-pattern-mobile': "url('/images/hero-background-mobile.jpg')",
         'hero-pattern-lg': "url('/images/hero-background-lg.jpg')",
       },
       fontFamily: {
