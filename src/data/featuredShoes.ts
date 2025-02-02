@@ -1,5 +1,5 @@
 interface shoe {
-  id: number;
+  id: string;
   name: string;
   price: number;
   maker: string;
@@ -8,7 +8,7 @@ interface shoe {
 
 export const featuredShoes: shoe[] = [
   {
-    id: 1,
+    id: 'Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Medium-Olive',
     name: 'Air Jordan 1 Retro Low OG SP Travis Scott Medium Olive',
     price: 700,
     maker: 'Nike',
@@ -18,7 +18,7 @@ export const featuredShoes: shoe[] = [
     ],
   },
   {
-    id: 2,
+    id: 'Adidas-Campus-x-Bad-Bunny-The-Last-Campus',
     name: 'Adidas Campus x Bad Bunny - The Last Campus',
     price: 230,
     maker: 'Adidas',
@@ -29,7 +29,7 @@ export const featuredShoes: shoe[] = [
     ],
   },
   {
-    id: 3,
+    id: 'Air-Jordan-4-Retro-White-Thunder',
     name: 'Air Jordan 4 Retro White Thunder',
     price: 250,
     maker: 'Nike',
@@ -39,7 +39,7 @@ export const featuredShoes: shoe[] = [
     ],
   },
   {
-    id: 4,
+    id: 'Nike-Dunk-Low-Cacao-Wow',
     name: 'Nike Dunk Low - Cacao Wow (W)',
     price: 170,
     maker: 'Nike',
@@ -50,7 +50,7 @@ export const featuredShoes: shoe[] = [
     ],
   },
   {
-    id: 5,
+    id: 'Nike-Sb-Dunk-Low-Travis-Scott',
     name: 'Nike SB Dunk Low - Travis Scott',
     price: 2300,
     maker: 'Nike',
@@ -61,7 +61,7 @@ export const featuredShoes: shoe[] = [
     ],
   },
   {
-    id: 6,
+    id: 'Adidas-Campus-00s-Core-Black',
     name: 'Adidas Campus 00s Core Black',
     price: 170,
     maker: 'Adidas',

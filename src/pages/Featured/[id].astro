@@ -1,0 +1,68 @@
+---
+// Importa el Layout y los datos de los zapatos
+import Layout from '../../layouts/Layout.astro';
+import { featuredShoes } from '../../data/featuredShoes';
+
+// Define la interfaz Shoe
+interface Shoe {
+  id: string;
+  name: string;
+  price: number;
+  maker: string;
+  images: string[];
+}
+
+export function getStaticPaths() {
+  return featuredShoes.map((shoe) => ({
+    params: { id: shoe.id },
+  }));
+}
+
+// Utiliza fetch para obtener los datos del zapato seleccionado con tipado
+export async function get({ params }: { params: { id: string } }) {
+  const { id } = params;
+  const shoe = featuredShoes.find((item: Shoe) => item.id === id);
+  return {
+    props: { shoe },
+  };
+}
+
+const { shoe } = Astro.props as { shoe: Shoe };
+---
+
+<Layout>
+  {
+    shoe ? (
+      <>
+        <picture>
+          <img
+            class="rounded-xl relative -top-10"
+            src={shoe.images[0]}
+            alt={`Imagen del Zapato: ${shoe.name}`}
+          />
+        </picture>
+        <div class="flex flex-col">
+          <span class="text-2xl md:text-xl text-neutral-400">{shoe.maker}</span>
+          <h2 class="text-4xl md:text-2xl font-bricolage-grotesque font-bold tracking-wide my-5 md:my-3 h-16 flex">
+            {shoe.name}
+          </h2>
+          <span class="text-2xl pt-2 md:pt-0 md:text-xl tracking-widest font-bold text-neutral-400">
+            ${shoe.price}.00
+          </span>
+        </div>
+        <div class="mt-12 flex justify-center">
+          <button>
+            <a
+              class="px-40 md:px-28 text-2xl text-nowrap md:text-base text-white font-bold tracking-wider border-2 py-4 rounded inline-block hover:scale-110 hover:bg-blue-600 transition"
+              href={`/Featured/${shoe.id}`}
+            >
+              AGREGAR AL CARRITO
+            </a>
+          </button>
+        </div>
+      </>
+    ) : (
+      <p>Zapato no encontrado</p>
+    )
+  }
+</Layout>
