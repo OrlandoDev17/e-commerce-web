@@ -1,5 +1,5 @@
 ---
-const { width } = Astro.props;
+const { className } = Astro.props;
 ---
 
 <svg
@@ -9,7 +9,8 @@ const { width } = Astro.props;
   stroke="currentColor"
   stroke-linecap="round"
   stroke-linejoin="round"
-  width={width}
+  class={className}
+  width="auto"
   stroke-width="2"
 >
   <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>

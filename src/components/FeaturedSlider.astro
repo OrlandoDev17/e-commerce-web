@@ -12,21 +12,25 @@ import SliderCard from './SliderCard.astro';
 
 <main class="relative">
   <!-- Contenedor Principal del Swiper -->
-  <div class="swiper h-auto w-[600px] md:w-full relative md:left-0 md:-top-12">
+  <div class="swiper flex h-auto w-full relative md:left-0 md:-top-12">
     <!-- Wrapper Adicional Requerido -->
-    <div class="swiper-wrapper gap-x-10">
+    <div class="swiper-wrapper gap-x-1 md:gap-x-10">
       <!-- Slides -->
       {
         featuredShoes.map((shoe) => (
           // Card
-          <article class="swiper-slide mt-44 w-full md:max-w-[575px] bg-primary rounded-2xl p-8">
+          <article class="swiper-slide mt-44 w-full max-w-[100vh] md:max-w-[575px] bg-primary rounded-2xl p-8">
             <SliderCard shoe={shoe} />
           </article>
         ))
       }
     </div>
-    <span class="swiper-button-prev absolute top-[60%]"></span>
-    <span class="swiper-button-next absolute top-[60%]"></span>
+    <span
+      class="swiper-button-prev absolute top-1/2 transform md:-translate-y-1/2"
+    ></span>
+    <span
+      class="swiper-button-next absolute top-1/2 transform md:-translate-y-1/2"
+    ></span>
   </div>
 </main>
 
@@ -35,11 +39,11 @@ import SliderCard from './SliderCard.astro';
   import Swiper from 'swiper';
   import 'swiper/css';
 
-  // Modulo Navigation de Swiper y Estilos
+  // Módulo Navigation de Swiper y Estilos
   import { Navigation } from 'swiper/modules';
   import 'swiper/css/navigation';
 
-  // Modulo de autoplay de Swiper y estilos
+  // Módulo de autoplay de Swiper y estilos
   import { Autoplay } from 'swiper/modules';
   import 'swiper/css/autoplay';
 
